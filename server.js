@@ -8,7 +8,7 @@ app.use(cors());
 
 const port = process.env.PORT || 3001;
 
-app.get('/', (req, res) => res.send('Working....'));
+app.get('/', (req, res) => res.status(200).json({message:'Working....'}));
 
 const server = app.listen(port, () => {
     console.log('Server is running on port: ' + port);
